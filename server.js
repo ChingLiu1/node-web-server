@@ -21,9 +21,11 @@ app.use((req, res, next) => {
 });
 
 //middleware for mainteance
+/*
 app.use((req, res, next) => {
 	res.render('our.hbs');
 });
+*/
 
 app.get('/', (req, res) => {
 	res.render('home.hbs', {
@@ -37,6 +39,12 @@ app.get('/aisha', (req, res) => {
 		pageT: 'aisha',
 	})
 }); 
+
+app.get('/projects', (req, res)=>{
+   res.render('projects.hbs',{
+       pageT : 'projects'
+   }); 
+});
 
 app.get('/rose', (req, res) => {
 	res.render('rose.hbs',{
